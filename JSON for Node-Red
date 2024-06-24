@@ -1,0 +1,509 @@
+[
+    {
+        "id": "9fc5a964fcf4059e",
+        "type": "tab",
+        "label": "Servo+LCD+Light",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2ff36ff5.bdc628",
+        "type": "ui_tab",
+        "name": "Studio_control",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4676f3ea231e92f9",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "72c2f0568032f2ec",
+        "type": "ui_group",
+        "name": "Temperature and Humidity",
+        "tab": "fc14bff638d494ba",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "73a2e7785e31f944",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fc14bff638d494ba",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "23b1926612b7ecec",
+        "type": "ui_gauge",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "group": "72c2f0568032f2ec",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature gauge",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 550,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "45bf0fa3243d5110",
+        "type": "ui_gauge",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "group": "72c2f0568032f2ec",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity gauge",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 560,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "289bcc75b3ca93a3",
+        "type": "ui_chart",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "group": "72c2f0568032f2ec",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 550,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25195c7c0a4843de",
+        "type": "ui_chart",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "group": "72c2f0568032f2ec",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 560,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb6bba7ef4b6048f",
+        "type": "ui_slider",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "label": "Servo",
+        "tooltip": "",
+        "group": "72c2f0568032f2ec",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "b6052411cee7ee7d"
+            ]
+        ]
+    },
+    {
+        "id": "c2e43c2b50d58827",
+        "type": "ui_switch",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "label": "LED",
+        "tooltip": "",
+        "group": "72c2f0568032f2ec",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "46451923125da4f3"
+            ]
+        ]
+    },
+    {
+        "id": "46451923125da4f3",
+        "type": "mqtt out",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "topic": "lights",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "73a2e7785e31f944",
+        "x": 570,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b6052411cee7ee7d",
+        "type": "mqtt out",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "topic": "servo",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "73a2e7785e31f944",
+        "x": 530,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "bb02ac5ee8edf71d",
+        "type": "mqtt in",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "topic": "Tempdata",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "73a2e7785e31f944",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 100,
+        "wires": [
+            [
+                "c8e66a27ee23b8f1",
+                "bfc54f2c37f8f4a0",
+                "77557c9e9da52a67"
+            ]
+        ]
+    },
+    {
+        "id": "bfc54f2c37f8f4a0",
+        "type": "function",
+        "z": "9fc5a964fcf4059e",
+        "name": "Extract Humidity",
+        "func": "var input = msg.payload; // Assuming the input is in msg.payload\n\n// Remove any leading or trailing whitespace\ninput = input.trim();\n\n// Split the input string using commas as the delimiter\nvar values = input.split(',');\n\n// Remove leading and trailing whitespace from each value and convert to float\nvalues = values.map(function (value) {\n    return parseFloat(value.trim());\n});\n\nmsg.payload = values[1]; // Set the output payload to the array of float values\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "45bf0fa3243d5110",
+                "25195c7c0a4843de"
+            ]
+        ]
+    },
+    {
+        "id": "c8e66a27ee23b8f1",
+        "type": "function",
+        "z": "9fc5a964fcf4059e",
+        "name": "Extract Temperature",
+        "func": "var input = msg.payload; // Assuming the input is in msg.payload\n\n// Remove any leading or trailing whitespace\ninput = input.trim();\n\n// Split the input string using commas as the delimiter\nvar values = input.split(',');\n\n// Remove leading and trailing whitespace from each value and convert to float\nvalues = values.map(function (value) {\n    return parseFloat(value.trim());\n});\n\nmsg.payload = values[0]; // Set the output payload to the array of float values\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "23b1926612b7ecec",
+                "289bcc75b3ca93a3"
+            ]
+        ]
+    },
+    {
+        "id": "05b8852d5ae6f3ea",
+        "type": "file",
+        "z": "9fc5a964fcf4059e",
+        "name": "",
+        "filename": "C:\\Users\\Acer\\Desktop\\datalog.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 860,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77557c9e9da52a67",
+        "type": "function",
+        "z": "9fc5a964fcf4059e",
+        "name": "Add Timestamp",
+        "func": "var timestamp = new Date().toISOString(); // Get the current timestamp in ISO 8601 format\nvar value = msg.payload; // Get the input value\n\n// Create the output message\nmsg.payload = timestamp + \", \" + value;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "05b8852d5ae6f3ea"
+            ]
+        ]
+    }
+]
